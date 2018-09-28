@@ -16,22 +16,26 @@ class App extends Component {
 
         <Router>
           <div>
-            <ul
-              style={{
-                listStyle: "none"
-              }}
-            >
+            <ol>
               <li>
                 <Link to="/">Failing Demo</Link>
               </li>
               <li>
                 <Link to="/workaround">Workaround</Link>
               </li>
-            </ul>
-            <Switch>
-              <Route exact path="/" component={Wizard} />
-              <Route path="/workaround" component={Workaround} />
-            </Switch>
+            </ol>
+            <div
+              style={{
+                border: "1px dashed black",
+                padding: "2em",
+                margin: "2em"
+              }}
+            >
+              <Switch>
+                <Route exact path="/" component={Wizard} />
+                <Route path="/workaround" component={Workaround} />
+              </Switch>
+            </div>
           </div>
         </Router>
       </div>
